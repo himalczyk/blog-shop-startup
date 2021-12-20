@@ -1,0 +1,2 @@
+# micelka
+Startup blog.
