@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<h2 style="color: #FF6289">Produkty</h2>
+<div class="row">
+{% for post in posts %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img src="{{ post.image.url }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{ post.body }}</p>
+                <a href="{% url 'post_detail' post.pk %}"
+                   class="btn btn-info">
+                    Wiecej informacji
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

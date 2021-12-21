@@ -58,7 +58,7 @@ ROOT_URLCONF = 'micelka.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['home/templates'],
+        'DIRS': ['micelka/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
