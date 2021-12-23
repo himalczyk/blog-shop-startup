@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block page_content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'about/style.css'%}"/>
+<!-- Background image -->
+<div
+  class="bg-image"
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+    </div>
+  </div>
+</div>
+<!-- Background image -->
+<h2 class="owner">Twórca mydeł</h2>
+<div class="row justify-content-center">
+    {% for abouts in abouts %}
+        <div class="col-md-4">
+            <div class="card mb-2">
+                <img src="{{ abouts.image.url }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ abouts.title }}</h5>
+                    <p class="card-text">{{ abouts.description }}</p>
+                    {% comment %} <a href="{% url 'about_details' about.pk %}"
+                    class="btn btn-info">
+                        Czytaj dalej
+                    </a> {% endcomment %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
