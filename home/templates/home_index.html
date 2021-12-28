@@ -2,7 +2,20 @@
 {% block page_content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'home/style.css'%}"/>
-<h2>Produkty</h2>
+
+<style>
+    label, input {
+        display: block;
+    }
+    span.helptext {
+        display: none;
+    }
+</style>
+<body id="bg" style="background-image: url('{% static "images/background.jpg"%}')";>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/style.css'%}"/>
+<h1 class="h_products">Milo mi Ciebie tutaj witac!</h1>
+<h2 class="h_products">Produkty</h2>
 <div class="row">
 {% for post in posts %}
     <div class="col-md-4">

@@ -1,14 +1,3 @@
-/* h5 {
-color:#9E4244;
-} */
-
-.h_products {
-	font-family: "Inter", sans-serif;
-    color: #FCDDE8;
-	font-size: 40px ;  
-	font-weight: 700;
-}
-
 h1 {
     color: white;
     font-family: 'Times New Roman', Times, serif;
@@ -18,6 +7,7 @@ h1 {
 h2{
     color: white;
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 #bg{
