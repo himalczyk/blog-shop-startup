@@ -134,3 +134,11 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#redirects to this page/view if login or logout
+LOGIN_REDIRECT_URL = "dashboard"
+LOGOUT_REDIRECT_URL = "dashboard"
+
+#set local server for sending emails and seeing content in the console
+EMAIL_HOST = "localhost"
+EMAIL_PORT = 1025

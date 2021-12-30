@@ -1,13 +1,26 @@
 {% extends 'base.html' %}
 
 {% block page_content %}
-<h2>Login</h2>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'login/style.css'%}"/>
+<body id="bg" style="background-image: url('{% static "images/background.jpg"%}')";>
+<h2>Logowanie</h2>
 
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Login">
+    <input type="submit" value="Zaloguj sie">
 </form>
 
-<a href="{% url 'dashboard' %}">Spowrotem do strony glownej</a>
+{% comment %} <a href="{% url 'dashboard' %}">Spowrotem do strony glownej</a> {% endcomment %}
+
+<a href="{% url 'dashboard' %}"
+    class="btn btn-info">
+    Spowrotem do strony glownej
+</a>
+<a href="{% url 'password_reset' %}"
+    class="btn btn-info">
+    Zresetuj haslo
+</a>
+{% comment %} <a href="{% url 'password_reset' %}">Zresetuj haslo</a> {% endcomment %}
 {% endblock %}
