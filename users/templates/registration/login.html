@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'dashboard_base.html' %}
 
 {% block page_content %}
 {% load static %}
@@ -21,6 +21,10 @@
 <a href="{% url 'password_reset' %}"
     class="btn btn-info">
     Zresetuj haslo
+</a>
+<a href="{% url 'register' %}"
+    class="btn btn-info">
+    Zarejestruj sie
 </a>
 {% comment %} <a href="{% url 'password_reset' %}">Zresetuj haslo</a> {% endcomment %}
 {% endblock %}

@@ -9,3 +9,9 @@ h2{
     -o-background-size: cover;
     background-size: cover;
 }
+
+input {
+    background-color: #FF6289;
+    border-color: #FF6289;
+    color: #fff;
+}
