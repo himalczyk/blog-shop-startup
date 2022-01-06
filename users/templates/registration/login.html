@@ -13,10 +13,9 @@
 </form>
 
 {% comment %} <a href="{% url 'dashboard' %}">Spowrotem do strony glownej</a> {% endcomment %}
-
 <a href="{% url 'dashboard' %}"
     class="btn btn-info">
-    Spowrotem do strony glownej
+    Spowrotem do powitania
 </a>
 <a href="{% url 'password_reset' %}"
     class="btn btn-info">
@@ -25,6 +24,10 @@
 <a href="{% url 'register' %}"
     class="btn btn-info">
     Zarejestruj sie
+</a>
+<a href="{% url 'social:begin' 'github' %}"
+    class="btn btn-info">
+    Zaloguj sie przez GitHub
 </a>
 {% comment %} <a href="{% url 'password_reset' %}">Zresetuj haslo</a> {% endcomment %}
 {% endblock %}

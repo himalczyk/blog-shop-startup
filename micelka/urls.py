@@ -24,7 +24,8 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('about/', include('about.urls')),
     path('users/', include('users.urls')),
-    path('accounts/', include("django.contrib.auth.urls"))
+    path('accounts/', include("django.contrib.auth.urls")),
+    path('oauth/', include("social_django.urls"))
 ]
 
 if settings.DEBUG:
