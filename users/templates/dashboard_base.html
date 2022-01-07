@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block page_content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'users/style.css'%}"/>
 
@@ -13,5 +15,14 @@
 
 <h1>Milo mi Ciebie tutaj witac!</h1>
 
-{% block page_content %}
+<h2>Czesc, {{ user.username|default:'Guest' }}!</h2>
+
+<div>
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Wyloguj</a>
+        <a href="{% url 'password_change' %}">Zmien haslo</a>
+    {% else %}
+        <a href="{% url 'login' %}">Zaloguj</a>
+    {% endif %}
+</div>
 {% endblock %}

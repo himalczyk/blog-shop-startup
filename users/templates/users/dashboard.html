@@ -1,6 +1,6 @@
 {% extends 'dashboard_base.html' %}
 {% block page_content %}
-<h2>Czesc, {{ user.username|default:'Guest' }}!</h2>
+{% comment %} <h2>Czesc, {{ user.username|default:'Guest' }}!</h2>
 
 <div>
     {% if user.is_authenticated %}
@@ -9,5 +9,5 @@
     {% else %}
         <a href="{% url 'login' %}">Zaloguj</a>
     {% endif %}
-</div>
+</div> {% endcomment %}
 {% endblock %}

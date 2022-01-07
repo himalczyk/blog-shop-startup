@@ -5,9 +5,8 @@ from users.forms import CustomUserCreationForm
 
 # Create your views here.
 
-def dashboard(request):
-    print("I am in dashboard")
-    return render(request, "users/dashboard.html")
+def dashboard_base(request):
+    return render(request, "dashboard_base.html")
 
 def accounts(request):
     return render(request, "users/registration/login.html")
@@ -16,9 +15,7 @@ def oauth(request):
     return render(request, "users/registration/login.html")
 
 def register(request):
-    print("First level register")
     if request.method == "GET":
-        print("I am in get")
         return render(
             request, "users/register.html",
             {"form": CustomUserCreationForm}

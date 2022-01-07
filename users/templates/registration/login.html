@@ -1,4 +1,4 @@
-{% extends 'dashboard_base.html' %}
+{% extends 'base.html' %}
 
 {% block page_content %}
 {% load static %}
@@ -13,21 +13,23 @@
 </form>
 
 {% comment %} <a href="{% url 'dashboard' %}">Spowrotem do strony glownej</a> {% endcomment %}
-<a href="{% url 'dashboard' %}"
-    class="btn btn-info">
-    Spowrotem do powitania
-</a>
-<a href="{% url 'password_reset' %}"
-    class="btn btn-info">
-    Zresetuj haslo
-</a>
-<a href="{% url 'register' %}"
-    class="btn btn-info">
-    Zarejestruj sie
-</a>
-<a href="{% url 'social:begin' 'github' %}"
-    class="btn btn-info">
-    Zaloguj sie przez GitHub
-</a>
+{% comment %} <div class="btn-group-vertical"> {% endcomment %}
+    <a href="{% url 'dashboard_base' %}"
+        class="btn btn-info btn-sm">
+        Spowrotem do powitania
+    </a>
+    <a href="{% url 'password_reset' %}"
+        class="btn btn-info btn-sm">
+        Zresetuj haslo
+    </a>
+    <a href="{% url 'register' %}"
+        class="btn btn-info btn-sm">
+        Zarejestruj sie
+    </a>
+    <a href="{% url 'social:begin' 'github' %}"
+        class="btn btn-info btn-sm">
+        Zaloguj sie przez GitHub
+    </a>
+{% comment %} </div> {% endcomment %}
 {% comment %} <a href="{% url 'password_reset' %}">Zresetuj haslo</a> {% endcomment %}
 {% endblock %}
