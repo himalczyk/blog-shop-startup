@@ -25,5 +25,5 @@ class PostTests(TestCase):
         
     def test_post_str_representation(self):
         self.assertEqual(
-            str(self.post), "My Micelka Blog: Test Post object title"
+            str(self.post), "Test post object post name: Test Post object title"
         )
