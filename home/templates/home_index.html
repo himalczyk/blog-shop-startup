@@ -16,14 +16,14 @@
 <link rel="stylesheet" type="text/css" href="{% static 'home/style.css'%}"/>
 <h2 class="h_products">Produkty</h2>
 <div class="row">
-{% for post in posts %}
+{% for products in products %}
     <div class="col-md-4">
         <div class="card mb-2">
-            <img src="{{ post.image.url }}">
+            <img src="{{ product.image.url }}">
             <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">{{ post.body }}</p>
-                <a href="{% url 'post_detail' post.pk %}"
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p class="card-text">{{ product.body }}</p>
+                <a href="{% url 'product_detail' product.pk %}"
                    class="btn btn-info">
                     Kup teraz
                 </a>

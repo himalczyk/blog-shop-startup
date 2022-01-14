@@ -1,17 +1,17 @@
 from django.shortcuts import render
-from home.models import Post
+from home.models import Product
 
 # Create your views here.
 def home_index(request):
-    posts = Post.objects.all()
+    products = Product.objects.all()
     content = {
-        'posts': posts
+        'products': products
     }
     return render(request, 'home_index.html', content)
 
-def post_detail(request, pk):
-    posts = Post.objects.get(pk=pk)
+def product_detail(request, pk):
+    products = Product.objects.get(pk=pk)
     content = {
-        'posts': posts
+        'products': products
     }
-    return render(request, 'post_detail.html', content)
+    return render(request, 'product_detail.html', content)
