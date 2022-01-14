@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'about',
     'users',
     'social_django',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -141,8 +142,8 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #redirects to this page/view if login or logout
-LOGIN_REDIRECT_URL = "dashboard"
-LOGOUT_REDIRECT_URL = "dashboard"
+LOGIN_REDIRECT_URL = "dashboard_base"
+LOGOUT_REDIRECT_URL = "dashboard_base"
 
 #set local server for sending emails and seeing content in the console
 EMAIL_HOST = "localhost"
