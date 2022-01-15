@@ -1,0 +1,22 @@
+#bg{
+    background: url('{% static "image/containers.jpg" %}') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+    
+.owner{
+    text-align: center;
+    padding: 20px;
+}
+
+.row{
+    align-items: center;
+}
+
+.col-md-4{
+    align-items: center;
+}
+    
+    

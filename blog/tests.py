@@ -1,6 +1,11 @@
+from urllib import response
 from django.test import TestCase
 from django.utils import timezone
+from django.urls.base import reverse
+
 from .models import Post
+
+from datetime import datetime
 
 # Create your tests here.
 
@@ -27,3 +32,15 @@ class PostTests(TestCase):
         self.assertEqual(
             str(self.post), "Test post object post name: Test Post object title"
         )
+        
+    def test_news_page_status_code(self):
+        response = self.client.get("/blog/")
+        self.assertEqual(response.status_code, 200)
+        
+    def test_news_page_uses_correct_template(self):
+        response = self.client.get(reverse("news"))
+        self.assertTemplateUsed(response, "news.html")
+        
+    def test_newspage_list_contents(self):
+        response = self.client.get(reverse("news"))
+        self.assertContains(response, "Test Post object title")
