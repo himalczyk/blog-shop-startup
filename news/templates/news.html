@@ -2,7 +2,7 @@
 {% block page_content %}
 
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css'%}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'news/style.css'%}"/>
 <!-- Background image -->
 <body id="bg" style="background-image: url('{% static "images/background.jpg"%}')";>
 <!-- Background image -->
@@ -18,7 +18,7 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'blog/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'news/style.css' %}" />
   </head>
   <body class="d-flex flex-column">
     
@@ -27,10 +27,10 @@
         <div class="row">
           <div class="col text-center">\
             <h2>Sprawdz najnowsze posty na social mediach!</h2>
-            <a href="https://www.instagram.com/micel_ka/">
+            <a href="https://www.instagram.com/micel_ka/" target="_blank">
                 <img id="instagram-logo" src="{% static 'imgs/logo-instagram-png-13567.png' %}" alt="micelka-instagram">
             </a>
-            <a href="https://www.facebook.com/micelka/">
+            <a href="https://www.facebook.com/micelka/" target="_blank">
                 <img id="facebook-logo" src="{% static 'imgs/facebook-logo-png-6370.png' %}" alt="micelka-facebook">
             </a>
           </div>

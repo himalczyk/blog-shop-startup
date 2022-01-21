@@ -26,7 +26,7 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('accounts/', include("django.contrib.auth.urls")),
     path('oauth/', include("social_django.urls")),
-    path('blog/', include("blog.urls"))
+    path('news/', include("news.urls"))
 ]
 
 if settings.DEBUG:

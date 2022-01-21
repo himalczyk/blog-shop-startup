@@ -34,7 +34,7 @@ class PostTests(TestCase):
         )
         
     def test_news_page_status_code(self):
-        response = self.client.get("/blog/")
+        response = self.client.get("/news/")
         self.assertEqual(response.status_code, 200)
         
     def test_news_page_uses_correct_template(self):

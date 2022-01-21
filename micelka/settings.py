@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'about',
     'users',
     'social_django',
-    'blog',
+    'news',
 ]
 
 MIDDLEWARE = [
