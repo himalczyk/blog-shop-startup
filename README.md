@@ -1,5 +1,5 @@
-# micelka
-Startup blog.
+# blog-shop-startup
+Startup blog, shop to work on.
 Using django framework, bootstrap and css.
 
 Apps:
